@@ -1,0 +1,32 @@
+.leftside,.rightside{
+    height: 100vh;
+    width:100%;
+}
+
+.leftside{
+   
+    padding-top: 50px;
+    padding-left: 100px;
+    border-style: solid;
+    /* background-image:  url("invoice.png"); */
+    overflow: auto;
+    /* Optional: Customize scrollbar styles */
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f0f0f0;
+   
+}
+
+.rightside{
+    border-style: solid;
+    background-color: aqua;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.img-responsive{
+    height: 500px;
+    width: 500px;
+}

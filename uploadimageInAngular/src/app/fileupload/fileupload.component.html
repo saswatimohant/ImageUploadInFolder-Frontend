@@ -1,0 +1,150 @@
+<html>
+  <body>
+
+  <div class="jumbotron jumbotron-fluid bg-primary">
+    <h1 class="display-4 text-center">Angular File-Upload Project</h1>
+  </div> 
+  <div class ="container mt-5">
+   <div class="text-center" >
+    <input type="file" (change)="onChange($event)" class="form-group"/>
+    <button (click)="uplopadFileONSubmit()" type="button" class="btn btn-success">Upload File</button>&nbsp;
+   </div>
+  </div>
+<table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>TYPE</th>
+        <th>FILEPATH</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr>
+        <td>slno</td>
+        <td>status</td>
+        <td>roleid</td>
+        <td>userid</td>
+        <td>createdat</td>
+        <td>createdby</td>
+        <td>updatedat</td>
+        <td>updatedby</td>
+      </tr> -->
+       <tr *ngFor="let uploadimage of _uploadimage" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="fetchImage(uploadimage.id)">
+        <td>{{uploadimage.id}}</td>
+        <td>{{uploadimage.name}}</td>
+        <td>{{uploadimage.type}}</td>
+        <td>{{uploadimage.filePath}}</td>
+      </tr>
+    </tbody>
+  </table> 
+
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Dual Pannel</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+  <div class="container mt-5" >
+      <div class="card p-2">
+  
+          <div class="row" >
+              <div class="col-6" >
+             
+                <img [src]="imageUrl" alt="Uploaded Image" style="height: 200px; width: 200px;">
+              </div>
+  
+              <div class="col-6" >
+                
+                  <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Outline form field</mat-label>
+                      <input matInput placeholder="Placeholder">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                    
+                    <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Outline form field</mat-label>
+                      <input matInput placeholder="Placeholder">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+  
+                    <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Outline form field</mat-label>
+                      <input matInput placeholder="Placeholder">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+  
+                    <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Outline form field</mat-label>
+                      <input matInput placeholder="Placeholder">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                      <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                 
+              </div>
+          </div>
+  
+      </div>
+  
+  </div>
+  </div>
+  </div>
+  </div> -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content custom-border">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Dual Pannel</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+  <div class="row no-gutters"  >
+
+    <div class="col no-gutters">
+
+        <div class="leftside ">
+            <img [src]="imageUrl" alt="Uploaded Image" style="height: 500px; width: 500px; ">
+        </div>
+        
+    </div>
+
+    <div class="col no-gutters">
+
+        <div class="rightside" style="position:inherit;">
+
+            <label>Enter name</label>&nbsp;
+            <input type="text" name="txtname">
+            <br><br>
+            <label>Enter name</label>&nbsp;
+            <input type="text" name="txtname">
+            <br><br>
+            <label>Enter name</label>&nbsp;
+            <input type="text" name="txtname">
+            <br><br>
+            <label>Enter name</label>&nbsp;
+            <input type="text" name="txtname">
+            <br><br>
+            <label>Enter name</label>&nbsp;
+            <input type="text" name="txtname">
+        </div>
+        
+    </div>
+
+ </div>
+
+</div>
+</div>
+</div>
+  </body>
+  </html>
+
+  
+
+
+

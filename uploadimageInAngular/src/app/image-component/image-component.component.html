@@ -1,0 +1,6 @@
+<div *ngIf="imageUrl">
+    <img [src]="imageUrl" alt="Uploaded Image">
+  </div>
+  <div *ngIf="!imageUrl">
+    <p>No image available.</p>
+  </div>

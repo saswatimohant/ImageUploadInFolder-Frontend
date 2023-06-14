@@ -1,0 +1,50 @@
+
+
+<div class="jumbotron jumbotron-fluid bg-primary">
+    <h1 class="display-4 text-center">Angular File-Upload Project</h1>
+  </div> 
+  <div class ="container mt-5">
+   <div class="text-center" >
+    <input type="file" (change)="onChange($event)" class="form-group"/>
+    <button (click)="uplopadFileONSubmit()" type="button" class="btn btn-success">Upload File</button>&nbsp;
+   </div>
+  </div>
+<table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>TYPE</th>
+        <th>FILEPATH</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let uploadimage">
+      <!-- <tr>
+        <td>slno</td>
+        <td>status</td>
+        <td>roleid</td>
+        <td>userid</td>
+        <td>createdat</td>
+        <td>createdby</td>
+        <td>updatedat</td>
+        <td>updatedby</td>
+      </tr> -->
+       <tr *ngFor="let uploadimage of _uploadimage" (dblclick)="showPopup('modal-2', uploadimage)">
+        <td>{{uploadimage.id}}</td>
+        <td>{{uploadimage.name}}</td>
+        <td>{{uploadimage.type}}</td>
+        <td>{{uploadimage.filePath}}</td>
+      </tr>
+    </tbody>
+  </table> 
+  <!-- <app-jw-modal id="modal-2">
+    <h1>A sample modal window</h1>
+    <div style="padding-bottom: 100px;">
+      <span style="padding-right: 100px;font-weight: bold;align-content: right;">Post Id:</span>
+      <span>{{this.uploadimage.id}}</span><br/>
+      <span style="padding-right: 100px;font-weight: bold;align-content: right;">Post Title:</span>
+      <textarea rows="5" cols="33" type="text" [(ngModel)]="this.uploadimage.name"></textarea>
+    </div>
+    <p style="padding-bottom: 200px;">Close with the button below or by clicking the background.</p>
+    <button (click)="this.popup.close();">Close</button>
+  </app-jw-modal> -->

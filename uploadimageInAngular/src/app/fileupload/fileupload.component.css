@@ -1,0 +1,10 @@
+.modal-dialog {
+    width: 1000px;
+    height: 800px;
+  }
+  .modal-content {
+    border: 2px solid #ff0000; /* Replace #ff0000 with your desired border color */
+    padding: 20px;
+  text-align: center;
+  }
+
